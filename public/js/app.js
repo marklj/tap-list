@@ -17799,7 +17799,7 @@ var _hoisted_1 = {
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
-  "class": "ml-5 font-light text-4xl mb-5"
+  "class": "font-light text-7xl mb-16 text-center"
 }, "Tap List", -1
 /* HOISTED */
 );
@@ -17808,38 +17808,38 @@ var _hoisted_3 = {
   "class": "rounded-full bg-gray-700 flex justify-between items-center my-4 mx-4"
 };
 var _hoisted_4 = {
-  "class": "rounded-full flex justify-center items-center w-24 h-24 m-2 text-gray-800 bg-white text-5xl font-bold"
+  "class": "rounded-full flex justify-center items-center w-36 h-36 m-3 text-gray-800 bg-white text-6xl font-bold"
 };
 var _hoisted_5 = {
   "class": "w-1/3 ml-6 my-2"
 };
 var _hoisted_6 = {
-  "class": "flex gap-3 text-xl"
+  "class": "flex gap-3 text-2xl mt-2"
 };
 var _hoisted_7 = {
   "class": "text-gray-400"
 };
 var _hoisted_8 = {
-  "class": "w-64 text-xl font-light text-orange-100 hidden lg:block"
+  "class": "w-64 text-2xl font-light text-orange-100 hidden lg:block"
 };
 var _hoisted_9 = {
   "class": "grid grid-cols-2"
 };
 var _hoisted_10 = {
-  "class": "w-72 xl:flex-1 mr-16 my-2 text-sm"
+  "class": "w-72 xl:flex-1 ml-6 mr-16 my-2 text-lg"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.beers, function (beer) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.tap), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-      "class": "font-medium -mb-1"
+      "class": "font-medium text-lg"
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.brewery), 513
     /* TEXT, NEED_PATCH */
     ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, beer.brewery]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
       "class": [{
-        'text-4xl': !beer.brewery,
-        'text-3xl': beer.brewery
+        'text-5xl': !beer.brewery,
+        'text-4xl': beer.brewery
       }, "text-green-100 font-bold text-4xl"]
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.name), 3
     /* TEXT, CLASS */

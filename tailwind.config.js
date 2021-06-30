@@ -8,6 +8,9 @@ module.exports = {
    ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+      fontFamily: {
+          'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+      },
     extend: {
         colors: {
             orange: colors.orange,
