@@ -26,10 +26,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         if(env('APP_ENV') == 'production') {
-            Artisan::call('migrate:fresh', [
-                '--seed' => true,
-                '--force' => true
-            ]);
+//            Artisan::call('migrate:fresh', [
+//                '--seed' => true,
+//                '--force' => true
+//            ]);
         }
     }
 }
