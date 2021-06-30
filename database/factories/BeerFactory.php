@@ -30,7 +30,7 @@ class BeerFactory extends Factory
             'srm' => $this->faker->numberBetween(5, 85),
             'og' => $this->faker->randomFloat(3, 1.00, 1.1),
             'fg' => $this->faker->randomFloat(3, 1.00, 1.1),
-            'notes' => $this->faker->sentence(15),
+//            'notes' => $this->faker->sentence(15),
             'active' => $this->faker->boolean,
         ];
     }
