@@ -16,47 +16,47 @@ class BeerSeeder extends Seeder
     {
         Beer::factory()
             ->create([
-                'tap' => 1,
-                'active' => true,
-                'name' => 'Hello Blond',
-                'style' => 'Blond Ale',
-                'abv' => 4.2,
-                'ibu' => 21,
-                'srm' => 22,
-                'og' => 1.040,
-                'fg' => 1.012,
-                'notes' => 'Cloudy with a full body and pungent with notes of overripe strawberries, orange zest, gooseberries, dry white wine, and tangerine juice.',
-            ]);
-
-        Beer::factory()
-            ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'Dream Team',
-                'style' => 'IPA',
-                'abv' => 6.1,
-                'ibu' => 53,
-                'srm' => 33,
-                'og' => 1.040,
+                'name' => 'Airhead Blond',
+                'style' => 'Blond Ale',
+                'abv' => 5,
+                'ibu' => 18,
+                'srm' => 5.3,
+                'og' => 1.045,
                 'fg' => 1.012,
-                'notes' => 'Cloudy with a full body and pungent with notes of overripe strawberries, orange zest, gooseberries, dry white wine, and tangerine juice.',
+                'notes' => 'Easy drinking, light and refreshing with low bitterness.',
             ]);
 
         Beer::factory()
             ->create([
-                'tap' => 3,
+                'tap' => 1,
                 'active' => true,
-                'name' => 'Campfire Stout',
-                'style' => 'Stout',
-                'brewery' => 'Belching Beaver'
+                'name' => 'Hazy Dream Team (Coming Soon)',
+                'style' => 'Hazy IPA',
+                'abv' => 5.9,
+                'ibu' => 77,
+                'srm' => null,
+                'og' => 1.057,
+                'fg' => 1.012,
+                'notes' => '',
             ]);
-        Beer::factory()
-            ->create([
-                'tap' => 4,
-                'active' => true,
-                'name' => 'Juice Cruz',
-                'style' => 'Sour Milkshake IPA',
-                'brewery' => 'Alvarado Street Brewery'
-            ]);
+//
+//        Beer::factory()
+//            ->create([
+//                'tap' => 3,
+//                'active' => true,
+//                'name' => 'Campfire Stout',
+//                'style' => 'Stout',
+//                'brewery' => 'Belching Beaver'
+//            ]);
+//        Beer::factory()
+//            ->create([
+//                'tap' => 4,
+//                'active' => true,
+//                'name' => 'Juice Cruz',
+//                'style' => 'Sour Milkshake IPA',
+//                'brewery' => 'Alvarado Street Brewery'
+//            ]);
     }
 }
