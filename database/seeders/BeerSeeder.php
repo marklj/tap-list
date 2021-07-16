@@ -18,21 +18,7 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'Airhead Blond',
-                'style' => 'Blond Ale',
-                'abv' => 5,
-                'ibu' => 18,
-                'srm' => 5.3,
-                'og' => 1.045,
-                'fg' => 1.012,
-                'notes' => 'Easy drinking, light and refreshing with low bitterness.',
-            ]);
-
-        Beer::factory()
-            ->create([
-                'tap' => 1,
-                'active' => true,
-                'name' => 'Hazy Dream Team (Coming Soon)',
+                'name' => 'Hazed and Confused',
                 'style' => 'Hazy IPA',
                 'abv' => 5.9,
                 'ibu' => 77,
