@@ -18,24 +18,39 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'Hazed and Confused',
-                'style' => 'Hazy IPA',
-                'abv' => 5.9,
-                'ibu' => 77,
-                'srm' => null,
-                'og' => 1.057,
-                'fg' => 1.012,
+                'name' => 'Get Oat Of Your Mind',
+                'style' => 'New England IPA',
+                'abv' => 5.6,
+                'ibu' => 25,
+                'srm' => 8.7,
+                'og' => 1.062,
+                'fg' => 1.020,
                 'notes' => '',
             ]);
-//
-//        Beer::factory()
-//            ->create([
-//                'tap' => 3,
-//                'active' => true,
-//                'name' => 'Campfire Stout',
-//                'style' => 'Stout',
-//                'brewery' => 'Belching Beaver'
-//            ]);
+
+        Beer::factory()
+            ->create([
+                'tap' => 1,
+                'active' => true,
+                'name' => 'Bring on the Wheat',
+                'style' => 'American Wheat',
+                'abv' => 4.7,
+                'og' => 1.054,
+                'fg' => 1.018,
+                'ibu' => 21
+            ]);
+
+        Beer::factory()
+            ->create([
+                'tap' => 4,
+                'active' => true,
+                'name' => 'Sparkling Water w/ Calamansi Friut',
+                'style' => 'H20',
+//                'abv' => 4.7,
+//                'og' => 1.054,
+//                'fg' => 1.018,
+//                'ibu' => 21
+            ]);
 //        Beer::factory()
 //            ->create([
 //                'tap' => 4,
