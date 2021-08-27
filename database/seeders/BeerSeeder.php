@@ -44,12 +44,14 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 4,
                 'active' => true,
-                'name' => 'Sparkling Water w/ Calamansi Friut',
+                'name' => 'Sparkling Water w/ Calamansi Fruit',
                 'style' => 'H20',
-//                'abv' => 4.7,
-//                'og' => 1.054,
-//                'fg' => 1.018,
-//                'ibu' => 21
+                'abv' => null,
+                'ibu' => null,
+                'srm' => null,
+                'og' => null,
+                'fg' => null,
+                'notes' => '',
             ]);
 //        Beer::factory()
 //            ->create([
