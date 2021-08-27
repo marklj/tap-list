@@ -16,15 +16,15 @@
                 </div>
                 <div class="flex gap-3 text-2xl mt-2">
                     <div>{{ beer.style }}</div>
-                    <div class="text-gray-400">{{ beer.abv }}%</div>
+                    <div class="text-gray-400" v-show="beer.abv">{{ beer.abv }}%</div>
                 </div>
             </div>
             <div class="w-64 text-2xl font-light text-orange-100 hidden lg:block">
                 <div class="grid grid-cols-2">
-                    <div>{{ beer.ibu }} IBU</div>
-                    <div>{{ beer.srm }} SRM</div>
-                    <div>{{ beer.og }} OG</div>
-                    <div>{{ beer.fg }} FG</div>
+                    <div v-show="beer.ibu">{{ beer.ibu }} IBU</div>
+                    <div v-show="beer.srm">{{ beer.srm }} SRM</div>
+                    <div v-show="beer.og">{{ beer.og }} OG</div>
+                    <div v-show="beer.fg">{{ beer.fg }} FG</div>
                 </div>
             </div>
             <div class="w-72 xl:flex-1 ml-6 mr-16 my-2 text-lg">
@@ -47,7 +47,10 @@ export default {
         this.beers = data;
     },
     mounted() {
-        console.log("Component mounted.");
+        Echo.channel('app')
+            .listen('TapListUpdated', (e) => {
+                console.log(e);
+    });
     },
 };
 </script>
