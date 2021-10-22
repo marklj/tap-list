@@ -18,26 +18,27 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'Get Oat Of Your Mind',
-                'style' => 'New England IPA',
-                'abv' => 5.6,
-                'ibu' => 25,
-                'srm' => 8.7,
-                'og' => 1.062,
-                'fg' => 1.020,
-                'notes' => '',
+                'name' => 'BREWja',
+                'style' => 'Hazy IPA',
+                'abv' => 7.4,
+                'ibu' => 40,
+                'srm' => 5.4,
+                'og' => 1.072,
+                'fg' => 1.016,
+                'notes' => 'Fresh, hoppy, and so drinkable, it\'ll put a spell on you.',
             ]);
 
         Beer::factory()
             ->create([
                 'tap' => 1,
                 'active' => true,
-                'name' => 'Bring on the Wheat',
-                'style' => 'American Wheat',
-                'abv' => 4.7,
-                'og' => 1.054,
-                'fg' => 1.018,
-                'ibu' => 21
+                'name' => 'Harvest Moon',
+                'style' => 'Blood Orange Hefeweizen',
+                'abv' => 5.6,
+                'og' => 1.056,
+                'fg' => 1.013,
+                'ibu' => 14,
+                'notes' => 'A juicy dose of blood orange that will make you howl for more.',
             ]);
 
         Beer::factory()
