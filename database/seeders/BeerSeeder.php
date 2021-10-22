@@ -18,7 +18,7 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'BREWja',
+                'name' => 'BREWja IPA',
                 'style' => 'Hazy IPA',
                 'abv' => 7.4,
                 'ibu' => 40,
