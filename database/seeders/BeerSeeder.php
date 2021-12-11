@@ -46,14 +46,14 @@ class BeerSeeder extends Seeder
                 'tap' => 3,
                 'active' => true,
                 'name' => 'Roundabouter',
-                'style' => 'Hazy IPA',
+                'style' => 'Tropical IPA',
                 'brewery' => 'Other Brother',
                 'ibu' => '23',
                 'abv' => '6.6',
                 'srm' => null,
                 'og' => null,
                 'fg' => null,
-                'notes' => 'Classic hop haze with a medium body that launches the nectarine and cannabis aromas into perfect orbit. Keep it movin\'!'
+                'notes' => 'Classic tropical IPA with a medium body that launches the nectarine and cannabis aromas into perfect orbit. Keep it movin\'!'
             ]);
 
         Beer::factory()
