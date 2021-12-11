@@ -50,6 +50,9 @@ class BeerSeeder extends Seeder
                 'brewery' => 'Other Brother',
                 'ibu' => '23',
                 'abv' => '6.6',
+                'srm' => null,
+                'og' => null,
+                'fg' => null,
                 'notes' => 'Classic hop haze with a medium body that launches the nectarine and cannabis aromas into perfect orbit. Keep it movin\'!'
             ]);
 
