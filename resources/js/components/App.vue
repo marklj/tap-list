@@ -1,6 +1,6 @@
 <template>
 <div class="">
-    <h2 class="font-light text-7xl mb-16 text-center">Tap List</h2>
+    <h2 class="font-light text-5xl mb-16 text-center">Tap List</h2>
 
     <div v-for="beer in beers">
         <div class="rounded-full bg-gray-700 flex justify-between items-center my-4 mx-4">

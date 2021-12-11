@@ -18,34 +18,46 @@ class BeerSeeder extends Seeder
             ->create([
                 'tap' => 2,
                 'active' => true,
-                'name' => 'BREWja IPA',
-                'style' => 'Hazy IPA',
-                'abv' => 7.4,
-                'ibu' => 40,
-                'srm' => 5.4,
-                'og' => 1.072,
-                'fg' => 1.016,
-                'notes' => 'Fresh, hoppy, and so drinkable, it\'ll put a spell on you.',
+                'name' => 'Oat Of This Swirled',
+                'style' => 'Pastry Stout',
+                'abv' => 12,
+                'ibu' => 24,
+                'srm' => 53,
+                'og' => 1.117,
+                'fg' => 1.037,
+                'notes' => 'A bourbon infused combination of cocoa nibs, cinnamon, and vanilla.',
             ]);
+
+//        Beer::factory()
+//            ->create([
+//                'tap' => 1,
+//                'active' => true,
+//                'name' => 'Harvest Moon',
+//                'style' => 'Blood Orange Hefeweizen',
+//                'abv' => 5.6,
+//                'og' => 1.056,
+//                'fg' => 1.013,
+//                'ibu' => 14,
+//                'notes' => 'A juicy dose of blood orange that will make you howl for more.',
+//            ]);
 
         Beer::factory()
             ->create([
-                'tap' => 1,
+                'tap' => 3,
                 'active' => true,
-                'name' => 'Harvest Moon',
-                'style' => 'Blood Orange Hefeweizen',
-                'abv' => 5.6,
-                'og' => 1.056,
-                'fg' => 1.013,
-                'ibu' => 14,
-                'notes' => 'A juicy dose of blood orange that will make you howl for more.',
+                'name' => 'Roundabouter',
+                'style' => 'Hazy IPA',
+                'brewery' => 'Other Brother',
+                'ibu' => '23',
+                'abv' => '6.6',
+                'notes' => 'Classic hop haze with a medium body that launches the nectarine and cannabis aromas into perfect orbit. Keep it movin\'!'
             ]);
 
         Beer::factory()
             ->create([
                 'tap' => 4,
                 'active' => true,
-                'name' => 'Sparkling Water w/ Calamansi Fruit',
+                'name' => 'Sparkling Water',
                 'style' => 'H20',
                 'abv' => null,
                 'ibu' => null,
