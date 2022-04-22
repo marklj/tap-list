@@ -28,32 +28,32 @@ class BeerSeeder extends Seeder
                 'notes' => 'A bourbon infused combination of cocoa nibs, cinnamon, and vanilla.',
             ]);
 
-//        Beer::factory()
-//            ->create([
-//                'tap' => 1,
-//                'active' => true,
-//                'name' => 'Harvest Moon',
-//                'style' => 'Blood Orange Hefeweizen',
-//                'abv' => 5.6,
-//                'og' => 1.056,
-//                'fg' => 1.013,
-//                'ibu' => 14,
-//                'notes' => 'A juicy dose of blood orange that will make you howl for more.',
-//            ]);
+        Beer::factory()
+            ->create([
+                'tap' => 1,
+                'active' => true,
+                'name' => 'Christmas Ale',
+                'style' => 'Seasonal Ale',
+                'abv' => 6.8,
+                'og' => 1.07,
+                'fg' => 1.018,
+                'ibu' => 30,
+                'notes' => 'Featuring ginger, cinnamon and a dollop of honey to create a wonderful ale that can be enjoyed year round.',
+            ]);
 
         Beer::factory()
             ->create([
                 'tap' => 3,
                 'active' => true,
-                'name' => 'Roundabouter',
-                'style' => 'Tropical IPA',
-                'brewery' => 'Other Brother',
-                'ibu' => '23',
-                'abv' => '6.6',
-                'srm' => null,
-                'og' => null,
-                'fg' => null,
-                'notes' => 'Classic tropical IPA with a medium body that launches the nectarine and cannabis aromas into perfect orbit. Keep it movin\'!'
+                'name' => 'Snickerdoodle!',
+                'style' => 'Blonde Stout',
+//                'brewery' => 'Other Brother',
+                'ibu' => '37',
+                'abv' => '8.1',
+                'srm' => 7.2,
+                'og' => 1.092,
+                'fg' => 1.030,
+                'notes' => 'Big and sweet, this in-your-face cinnamon bomb will give you vibes of fresh baked cookies right out of the oven.'
             ]);
 
         Beer::factory()
