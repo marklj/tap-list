@@ -14,32 +14,32 @@ class BeerSeeder extends Seeder
      */
     public function run()
     {
-        Beer::factory()
-            ->create([
-                'tap' => 2,
-                'active' => true,
-                'name' => 'Oat Of This Swirled',
-                'style' => 'Pastry Stout',
-                'abv' => 12,
-                'ibu' => 24,
-                'srm' => 53,
-                'og' => 1.117,
-                'fg' => 1.037,
-                'notes' => 'A bourbon infused combination of cocoa nibs, cinnamon, and vanilla.',
-            ]);
-
-        Beer::factory()
-            ->create([
-                'tap' => 1,
-                'active' => true,
-                'name' => 'Christmas Ale',
-                'style' => 'Seasonal Ale',
-                'abv' => 6.8,
-                'og' => 1.07,
-                'fg' => 1.018,
-                'ibu' => 30,
-                'notes' => 'Featuring ginger, cinnamon and a dollop of honey to create a wonderful ale that can be enjoyed year round.',
-            ]);
+//        Beer::factory()
+//            ->create([
+//                'tap' => 2,
+//                'active' => true,
+//                'name' => 'Oat Of This Swirled',
+//                'style' => 'Pastry Stout',
+//                'abv' => 12,
+//                'ibu' => 24,
+//                'srm' => 53,
+//                'og' => 1.117,
+//                'fg' => 1.037,
+//                'notes' => 'A bourbon infused combination of cocoa nibs, cinnamon, and vanilla.',
+//            ]);
+//
+//        Beer::factory()
+//            ->create([
+//                'tap' => 1,
+//                'active' => true,
+//                'name' => 'Christmas Ale',
+//                'style' => 'Seasonal Ale',
+//                'abv' => 6.8,
+//                'og' => 1.07,
+//                'fg' => 1.018,
+//                'ibu' => 30,
+//                'notes' => 'Featuring ginger, cinnamon and a dollop of honey to create a wonderful ale that can be enjoyed year round.',
+//            ]);
 
         Beer::factory()
             ->create([
