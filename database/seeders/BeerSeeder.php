@@ -14,19 +14,19 @@ class BeerSeeder extends Seeder
      */
     public function run()
     {
-//        Beer::factory()
-//            ->create([
-//                'tap' => 2,
-//                'active' => true,
-//                'name' => 'Oat Of This Swirled',
-//                'style' => 'Pastry Stout',
-//                'abv' => 12,
-//                'ibu' => 24,
-//                'srm' => 53,
-//                'og' => 1.117,
-//                'fg' => 1.037,
-//                'notes' => 'A bourbon infused combination of cocoa nibs, cinnamon, and vanilla.',
-//            ]);
+        Beer::factory()
+            ->create([
+                'tap' => 2,
+                'active' => true,
+                'name' => 'Droid Juice',
+                'style' => 'Juicy IPA',
+                'abv' => 8.1,
+                'ibu' => 28,
+                'srm' => 6.2,
+                'og' => 1.080,
+                'fg' => 1.018,
+                'notes' => 'Tropical, fruity and floral flavours and aromas, providing notes of mango and grapefruit.',
+            ]);
 //
 //        Beer::factory()
 //            ->create([
