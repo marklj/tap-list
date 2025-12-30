@@ -1,2 +1,19 @@
 # Raspberry Pi reboot script (contains password)
 reboot-pi.sh
+
+# Dependencies
+node_modules/
+
+# Build output
+build/
+.react-router/
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
