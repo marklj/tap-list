@@ -9,72 +9,131 @@
   </head>
   <body class="bg-gray-900 text-white">
     <div class="mx-auto max-w-4xl mt-8">
-      <div class="w-full">
-        <!-- TAP 1 -->
-        <div class="flex items-center gap-6 mt-24">
-          <div
-            class="border-yellow-500 text-gray-900 bg-yellow-200 border-8 w-28 h-28 rounded-full padding-2 text-7xl font-black flex items-center justify-center"
-          >
-            1
-          </div>
-          <div>
-            <div class="text-7xl font-black uppercase shadow-sm">Smart Blonde</div>
-            <div class="flex gap-16">
-              <div class="text-4xl font-light uppercase">Blonde Ale</div>
-              <div class="text-4xl font-light uppercase">5.1% ABV</div>
-              <div class="text-4xl font-light uppercase">16 IBU</div>
-            </div>
-          </div>
-        </div>
-        <!-- TAP 2 -->
-        <div class="flex items-center gap-6 mt-24">
-          <div
-            class="border-yellow-500 text-gray-900 bg-yellow-200 border-8 w-28 h-28 rounded-full padding-2 text-7xl font-black flex items-center justify-center"
-          >
-            2
-          </div>
-          <div>
-            <div class="text-7xl font-black uppercase shadow-sm">Tropical Mirage</div>
-            <div class="flex gap-16">
-              <div class="text-4xl font-light uppercase">New Zealand IPA</div>
-              <div class="text-4xl font-light uppercase">7.8% ABV</div>
-              <div class="text-4xl font-light uppercase">60 IBU</div>
-            </div>
-          </div>
-        </div>
-        <!-- TAP 3 -->
-        <div class="flex items-center gap-6 mt-24">
-          <div
-            class="border-yellow-500 text-gray-900 bg-yellow-200 border-8 w-28 h-28 rounded-full padding-2 text-7xl font-black flex items-center justify-center"
-          >
-            3
-          </div>
-          <div>
-            <div class="text-7xl font-black uppercase shadow-sm">Invasion</div>
-            <div class="flex gap-16">
-              <div class="text-4xl font-light uppercase">Hazy IPA</div>
-              <div class="text-4xl font-light uppercase">5.5% ABV</div>
-              <div class="text-4xl font-light uppercase">60 IBU</div>
-            </div>
-          </div>
-        </div>
-        <!-- TAP 4 -->
-        <div class="flex items-center gap-6 mt-24">
-          <div
-            class="border-yellow-500 text-gray-900 bg-yellow-200 border-8 w-28 h-28 rounded-full padding-2 text-7xl font-black flex items-center justify-center"
-          >
-            4
-          </div>
-          <div>
-            <div class="text-7xl font-black uppercase shadow-sm">Rosemary's Cranbaby</div>
-            <div class="flex gap-16">
-              <div class="text-4xl font-light uppercase">Rosemary Fruit Sour</div>
-              <div class="text-4xl font-light uppercase">5.6% ABV</div>
-              <div class="text-4xl font-light uppercase">0 IBU</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="taps-container" class="w-full"></div>
     </div>
+
+    <script>
+      // ============================================
+      // TAP LIST GENERATOR
+      // ============================================
+      // This script dynamically generates tap card listings from a JavaScript data array.
+      // To update beers: Edit the 'beers' array below
+      // To change styling: Modify the 'CLASSES' object
+
+      // ============================================
+      // DATA: Beer Listings
+      // ============================================
+      // Edit the beers array to update tap list. Each beer object must have:
+      // - number: tap position (1-4)
+      // - name: beer name
+      // - style: beer style/type
+      // - abv: alcohol by volume percentage
+      // - ibu: international bitterness units
+
+      const beers = [
+        { number: 1, name: "Smart Blonde", style: "Blonde Ale", abv: 5.1, ibu: 16 },
+        { number: 2, name: "Tropical Mirage", style: "New Zealand IPA", abv: 7.8, ibu: 60 },
+        { number: 3, name: "Invasion", style: "Hazy IPA", abv: 5.5, ibu: 60 },
+        { number: 4, name: "Rosemary's Cranbaby", style: "Rosemary Fruit Sour", abv: 5.6, ibu: 0 }
+      ];
+
+      // ============================================
+      // UI: Tailwind Classes
+      // ============================================
+      // Constants for styling. If you want to change appearance, modify these class strings.
+
+      const CLASSES = {
+        cardContainer: "flex items-center gap-6 mt-24",
+        badge: "border-yellow-500 text-gray-900 bg-yellow-200 border-8 w-28 h-28 rounded-full padding-2 text-7xl font-black flex items-center justify-center",
+        beerName: "text-7xl font-black uppercase shadow-sm",
+        infoContainer: "flex gap-16",
+        infoField: "text-4xl font-light uppercase"
+      };
+
+      // ============================================
+      // LOGIC: Card Generation
+      // ============================================
+
+      /**
+       * Creates a single tap card element
+       * @param {Object} beer - Beer object with number, name, style, abv, ibu
+       * @returns {HTMLElement} Complete tap card div element
+       */
+      function createTapCard(beer) {
+        // Outer container
+        const card = document.createElement('div');
+        card.setAttribute('class', CLASSES.cardContainer);
+
+        // Badge with tap number
+        const badge = document.createElement('div');
+        badge.setAttribute('class', CLASSES.badge);
+        badge.textContent = beer.number;
+
+        // Content section
+        const content = document.createElement('div');
+
+        // Beer name
+        const name = document.createElement('div');
+        name.setAttribute('class', CLASSES.beerName);
+        name.textContent = beer.name;
+
+        // Info container (style, ABV, IBU)
+        const infoContainer = document.createElement('div');
+        infoContainer.setAttribute('class', CLASSES.infoContainer);
+
+        // Style field
+        const styleDiv = document.createElement('div');
+        styleDiv.setAttribute('class', CLASSES.infoField);
+        styleDiv.textContent = beer.style;
+
+        // ABV field
+        const abvDiv = document.createElement('div');
+        abvDiv.setAttribute('class', CLASSES.infoField);
+        abvDiv.textContent = beer.abv + '% ABV';
+
+        // IBU field
+        const ibuDiv = document.createElement('div');
+        ibuDiv.setAttribute('class', CLASSES.infoField);
+        ibuDiv.textContent = beer.ibu + ' IBU';
+
+        // Assemble hierarchy
+        infoContainer.appendChild(styleDiv);
+        infoContainer.appendChild(abvDiv);
+        infoContainer.appendChild(ibuDiv);
+
+        content.appendChild(name);
+        content.appendChild(infoContainer);
+
+        card.appendChild(badge);
+        card.appendChild(content);
+
+        return card;
+      }
+
+      // ============================================
+      // INITIALIZATION
+      // ============================================
+
+      /**
+       * Initializes the tap list by generating all tap cards
+       */
+      function initializeTaps() {
+        const container = document.getElementById('taps-container');
+
+        if (!container) {
+          console.error('Tap container not found in DOM');
+          return;
+        }
+
+        // Generate and append each tap card
+        beers.forEach(beer => {
+          const card = createTapCard(beer);
+          container.appendChild(card);
+        });
+      }
+
+      // Execute when page loads
+      initializeTaps();
+    </script>
   </body>
 </html>
